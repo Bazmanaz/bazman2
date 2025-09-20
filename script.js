@@ -7,9 +7,9 @@ const toggle = () => {
 const books = [
   { t: 'Qadın dili', p: 16, img: 'https://i.imgur.com/SpcmZXN.jpg', link: 'kitablar/Qadin dili.html' },
   { t: 'Bazmanın 30 günlük təlimi', p: 10, img: 'https://i.imgur.com/IS2DQl8.jpg', link: 'kitablar/Bazmanin 30 gunluk telimi.html' },
-  { t: 'QADINLARLA FLÖRTETMƏ SƏNƏTİ', p: 30, img: 'https://i.imgur.com/fxo5sUc.jpg/seed/a3', link: 'kitablar/Qadinlarls flortetme seneti.html' },
+  { t: 'QADINLARLA FLÖRTETMƏ SƏNƏTİ', p: 30, img: 'https://i.imgur.com/fxo5sUc.jpg', link: 'kitablar/Qadinlarla flortetme seneti.html' },
   { t: 'QADIN TOVLAMA SƏNƏTİ', p: 40, img: 'https://i.imgur.com/yZ9zPeo.jpg', link: 'kitablar/Qadin tovlama seneti.html' },
-  { t: 'ALFA KİŞİ XARAKTERİ', p: 30, img: 'https://i.imgur.com/3aodR8x.jpg/seed/a3', link: 'kitablar/Alfa kisi xarakteri.html' },
+  { t: 'ALFA KİŞİ XARAKTERİ', p: 30, img: 'https://i.imgur.com/3aodR8x.jpg', link: 'kitablar/Alfa kisi xarakteri.html' },
   { t: 'QADINLARLA TƏSİRLİ MESAJLAŞMA VƏ İLK MESAJ', p: 0, img: 'https://i.imgur.com/kwMqYGO.jpg', link: 'kitablar/Qadinlarla tesirli mesajlasma ve ilk mesaj.html' },
   { t: 'MÜASİR HƏYATDA KİŞİ OLMAQ', p: 0, img: 'https://i.imgur.com/kcfFDWH.jpeg/fxo5sUc.jpg/seed/a3', link: 'kitablar/Muasir heyatda kisi olmaq.html' },
   { t: 'ARSIZ-MƏZƏLİ ÜSULU', p: 0, img: 'https://i.imgur.com/ERKHrOJ.jpg', link: 'kitablar/Arsiz-mezeli usulu.html' },
