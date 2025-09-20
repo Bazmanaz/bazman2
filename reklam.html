@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Bazmanın aksessuarları — BAZMAN.AZ</title> <style>
+  :root {
+    --sidebar-w: 300px;
+    --gap: 20px;
+    --bg: #f7f7f7;
+    --card-bg: #fff;
+    --card-border: #e0e0e0;
+    --text: #222;
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+    color: var(--text);
+    background: var(--bg);
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) 1fr var(--sidebar-w);
+    gap: var(--gap);
+    padding: 24px;
+    box-sizing: border-box;
+    min-height: 100vh;
+  }
+
+  /* Sidebar kart */
+  .sidebar {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    /* Sidebar'lar üçün əlavə stillər (ehtiyac olarsa) */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sidebar-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block; /* Şəklin altında əlavə boşluq olmaması üçün */
+    margin-bottom: 10px; /* Şəkil ilə mətn arasındakı boşluq */
+  }
+
+  .sidebar-content div:not(.ad-block) { /* Reklam blokları xaricindəki div'lər üçün */
+      font-size: 13px;
+      color: #555;
+  }
+
+  /* Reklam bloku stili */
+  .ad-block {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    text-align: center; /* Reklamın ortalanması */
+  }
+
+  .ad-block a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .ad-block img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+
+  .ad-block div[style*="margin-top:8px"] { /* Kampaniya və ya başlıq */
+    margin-top: 8px;
+    font-weight: 600;
+  }
+
+  .ad-block div[style*="font-size:13px"] { /* Məlumat */
+    font-size: 13px;
+    color: #666;
+  }
+
+
+  /* Main sahəsi */
+  main {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Əsas məzmun daxilindəki elementlər arası boşluq */
+  }
+
+  h1 {
+    margin-top: 0; /* Başlığın yuxarı boşluğunu sıfırlayır */
+    font-size: 2em; /* Başlığın ölçüsü */
+  }
+
+  p {
+      line-height: 1.6; /* Mətnin sətir aralığı */
+  }
+
+  /* Responsive dizayn üçün */
+  @media (max-width: 1024px) {
+    .layout {
+      grid-template-columns: 1fr 1fr; /* İki sütunlu düzənə keçir */
+    }
+    .sidebar {
+      grid-column: 1 / 2; /* Sol sidebar */
+    }
+    main {
+      grid-column: 2 / 3; /* Mərkəz məzmun */
+    }
+    aside.sidebar:nth-of-type(3) { /* Sağ sidebar */
+      grid-column: 1 / 2; /* Sağ sidebar sol tərəfə keçir */
+      margin-top: 20px; /* Yuxarıdan əlavə boşluq */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .layout {
+      grid-template-columns: 1fr; /* Tek sütunlu düzənə keçir */
+      padding: 16px;
+    }
+    .sidebar, main {
+      grid-column: 1 / -1; /* Bütün eni tutur */
+      margin-top: 0; /* Yuxarı boşluq sıfırlanır */
+    }
+    aside.sidebar:nth-of-type(3) {
+        margin-top: 20px; /* İkinci sidebar üçün yuxarı boşluq */
+    }
+  }
+
+  /* Header hissəsi - Haqqimizda.html'dən götürülüb */
+  .site-header {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      padding: .75rem 1rem;
+      border-bottom: 1px solid var(--card-border); /* Sərhəd rəngini uyğunlaşdırdım */
+      position: sticky;
+      top: 0;
+      background: var(--bg); /* Arxa fon rəngini dəyişdim */
+      z-index: 100; /* Digər elementlərin üzərində görünməsi üçün */
+  }
+
+  .site-header .brand img {
+      max-width: 120px; /* Logo enini məhdudlaşdırdım */
+      height: auto;
+  }
+
+  .nav {
+      display: flex;
+      gap: .8rem;
+      flex-wrap: wrap;
+  }
+
+  .nav a {
+      color: var(--text); /* Naviqasiya linklərinin rəngini dəyişdim */
+      text-decoration: none;
+      padding: .4rem .8rem;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .nav a:hover {
+      background-color: var(--accent); /* Hover zamanı vurgulu rəng */
+      color: white;
+  }
+
+  .nav a[href*="haqqimizda.html"] { /* "Haqqımızda" linkini vurğulayıram */
+      background-color: var(--accent);
+      color: white;
+      font-weight: bold;
+  }
+
+  #themeToggle {
+      background: transparent;
+      border: 1px solid var(--border); /* Border rəngini dəyişdim */
+      border-radius: 8px;
+      padding: .4rem .6rem;
+      color: var(--fg); /* İkon rəngini dəyişdim */
+      cursor: pointer;
+      font-size: 1.2rem;
+  }
+
+</style>
+</head>
+<title>Bazmanın aksessuarları — BAZMAN.AZ</title><link rel="stylesheet" href="style.css"><script defer src="script.js"></script>
+</head><body>
+<header class="site-header"><div class="brand"><img src="https://via.placeholder.com/120x40?text=BAZMAN.AZ" alt=""></div>
+<nav class="nav"><a href="index.html">Əsas</a><a href="reklam.html">Bazmanın aksessuarları</a></nav><button id="themeToggle">🌙</button></header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Sol yan panel">
+      <div class="ad-block" id="left-ad">
+        <div>
+          <a href="#">
+            <img src="https://via.placeholder.com/250x150?text=Reklam+1" alt="Reklam">
+            <div style="margin-top:8px;font-weight:600">Maraqlı Təklif</div>
+            <div style="font-size:13px;color:#666">Bu günə özəl endirim!</div>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <h1>Əsas Məzmun</h1>
+      <p>Bu sahə əsas məzmundur. Burada istədiyiniz HTML və ya məzmun olacaq.</p>
+      <p>Yan panellərdəki reklam HTML-lərini sonradan dəyişə bilərsiniz.</p>
+      <p>Bu mətn əsas məzmunın içinə yerləşdirilib və yan panellərə toxunulmayıb.</p>
+    </main>
+
+    <aside class="sidebar" aria-label="Sağ yan panel">
+      <div class="ad-block" id="right-ad">
+        <div>
+          <a href="#">
+            <img src="https://via.placeholder.com/250x150?text=Reklam+2" alt="Reklam">
+            <div style="margin-top:8px;font-weight:600">Kampaniya</div>
+            <div style="font-size:13px;color:#666">Endirim və ya məlumat.</div>
+          </a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    // Yuxarıda verilmiş JavaScript kodlarını bura əlavə edə bilərsiniz.
+    // Məsələn, tema dəyişdirmə funksionallığı üçün:
+    const toggleTheme = () => {
+      const d = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', d ? 'dark' : 'light');
+    };
+
+    document.getElementById('themeToggle')?.addEventListener('click', toggleTheme);
+
+    // Mövcud JavaScript kodlarınızın digər hissələri bura əlavə oluna bilər.
+  </script>
+</body>
+</html>

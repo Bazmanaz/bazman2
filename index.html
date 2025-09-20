@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAZMAN.AZ — Kişilər üçün</title>
+<style>
+:root{
+  --bg:#fff;
+  --fg:#111;
+  --muted:#666;
+  --card:#f6f6f7;
+  --accent:#0a84ff;
+  --border:#e6e6ea;
+}
+:root.dark{
+  --bg:#0b0c10;
+  --fg:#e6e6e6;
+  --muted:#9aa0a6;
+  --card:#121319;
+  --accent:#66aaff;
+  --border:#1f222a;
+  /* Qaranlıq rejimdə footer stilləri */
+  --footer-bg:#121319;
+  --footer-fg:#e6e6e6;
+}
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:Inter,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--fg);
+  margin-bottom: 60px; /* footer üstünü örtməsin deyə əlavə boşluq */
+}
+
+a{color:var(--accent); text-decoration:none;}
+
+.site-header{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+  justify-content:space-between;
+  padding:.75rem 1rem;
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  background:var(--bg);
+}
+
+.nav{display:flex;gap:.8rem;flex-wrap:wrap;}
+
+#themeToggle{
+  background:transparent;
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:.4rem .6rem;
+  color:var(--fg);
+}
+
+.hero{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+.hero h1{
+  margin-top:0;
+}
+.hero img{
+  margin-bottom:10px;
+}
+
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--bg);
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+  padding: 5px 0;
+  /* `body`dəki `var(--bg)` istifadə olunmalıdır */
+}
+/* Qaranlıq rejimdə footer stilləri */
+:root.dark .fixed-footer {
+  background: var(--footer-bg);
+  color: var(--footer-fg);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 5px;
+}
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s;
+  /* Sosial ikonların qaranlıq rejimdə dəyişməsi üçün filtr */
+  filter: var(--fg);
+}
+:root.dark .social-icons img {
+  filter: invert(1);
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+.copy {
+  margin-top: 5px;
+  color: var(--muted);
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="brand"><img src="https://via.placeholder.com/120x40?text=BAZMAN.AZ" alt=""></div>
+  <nav class="nav">
+    <a href="index.html">Əsas</a>
+    <a href="kitablar.html">Kitablar</a>
+    <a href="meqaleler/meqaleler.html">Məqalələr</a>
+    <a href="podcast/podcast.html">Podcast</a>
+    <a href="videolar/videolar.html">Video</a>
+  	<a href="haqqimizda.html">Haqqımızda</a>
+  </nav>
+  <button id="themeToggle">🌙</button>
+</header>
+<main>
+  <section class="hero">
+    <h1 style="margin:6px 0; font-size:20px; display:flex; align-items:center; justify-content:center; gap:8px;">
+      <img src="https://i.imgur.com/LOhQRks.jpg" width="100" height="100" style="border-radius:50%;">
+    <h1>Elektron Kitab Dünyasına Xoş Gəlmisiniz</h1></p>
+    "Bazman.az" saytı şəxsi inkişaf, qadınlarla münasibətlər, motivasiya və digər mövzular üzrə dəyərli məzmun təqdim edir. </p>Saytımızda sizə həyatınızda irəliləməyə kömək edəcək praktik məsləhətlər, dərin analizlər və ilhamverici məlumatlar tapa bilərsiniz.</p>Özünüzü daha yaxşı anlamaq, münasibətlərinizi gücləndirmək və hədəflərinizə çatmaq üçün Bazman.az-ı ziyarət edin.
+  </section>
+</main>
+<footer class="site-footer">
+  <section class="contact">
+    <footer class="container footer-grid fixed-footer">
+      <h3 style="text-align:center; margin-top: 5px; margin-bottom: 5px;">Bizimlə əlaqə</h3></p>
+      <div class="social-icons">
+        <a href="https://wa.me/994778037177" target="_blank">
+          <img src="https://cdn.simpleicons.org/whatsapp" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/bazman.az" target="_blank">
+          <img src="https://cdn.simpleicons.org/instagram" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/bazman.azerbaijan.2025" target="_blank">
+          <img src="https://cdn.simpleicons.org/facebook" alt="Facebook">
+        </a>
+        <a href="https://www.tiktok.com/search?q=bazman2023&t=1726723490502" target="_blank">
+          <img src="https://cdn.simpleicons.org/tiktok" alt="TikTok">
+        </a>
+        <a href="https://www.threads.com/@bazman.az" target="_blank">
+          <img src="https://cdn.simpleicons.org/threads" alt="Threads">
+        </a>
+      </div>
+     </section>
+ </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        // Yaddaşdan mövzunu yoxla
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            html.classList.add('dark');
+        }
+
+        // Düyməyə klik hadisəsini dinlə
+        themeToggleBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const currentTheme = html.classList.contains('dark') ? 'dark' : 'light';
+            localStorage.setItem('theme', currentTheme);
+        });
+    });
+</script>
+</body>
+</html>

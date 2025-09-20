@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitablar — BAZMAN.AZ</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <style>
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 120px;
+            right: 20px;
+            z-index: 1000; /* Ensure it stays on top */
+        }
+        .whatsapp-icon img {
+            width: 50px; /* Adjust size as needed */
+            height: 50px; /* Adjust size as needed */
+            border-radius: 50%; /* Makes it circular */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds a subtle shadow */
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand"><img src="https://via.placeholder.com/120x40?text=BAZMAN.AZ" alt=""></div>
+        <nav class="nav">
+            <a href="index.html">Əsas</a>
+            <a href="kitablar.html">Kitablar</a>
+        </nav>
+        <button id="themeToggle">🌙</button>
+    </header>
+
+    <main class="grid books">
+        <p align="center">
+            <font color="#FF0000"><b><a href="meqaleler/meqaleler.html">
+                <font color="green">
+                    <marquee width="201">YENİ MƏQALƏLƏRLƏ TANIŞ OLUN</marquee>
+                </font>
+            </a></b></font>
+        </p>
+        <div class="search-container">
+            <input type="text" id="bookSearch" placeholder="Kitab axtar...">
+        </div>
+        <div id="booksGrid" class="grid-3"></div>
+    </main>
+
+    <footer class="site-footer">
+        <p class="copy">© BAZMAN.AZ 2023-2025</p>
+    </footer>
+
+    <a href="https://wa.me/+994778037177" target="_blank" class="whatsapp-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp">
+    </a>
+</body>
+</html>
