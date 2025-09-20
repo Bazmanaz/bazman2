@@ -11,7 +11,7 @@ const books = [
   { t: 'QADIN TOVLAMA SƏNƏTİ', p: 40, img: 'https://i.imgur.com/yZ9zPeo.jpg', link: 'kitablar/Qadin tovlama seneti.html' },
   { t: 'ALFA KİŞİ XARAKTERİ', p: 30, img: 'https://i.imgur.com/3aodR8x.jpg', link: 'kitablar/Alfa kisi xarakteri.html' },
   { t: 'QADINLARLA TƏSİRLİ MESAJLAŞMA VƏ İLK MESAJ', p: 0, img: 'https://i.imgur.com/kwMqYGO.jpg', link: 'kitablar/Qadinlarla tesirli mesajlasma ve ilk mesaj.html' },
-  { t: 'MÜASİR HƏYATDA KİŞİ OLMAQ', p: 0, img: 'https://i.imgur.com/kcfFDWH.jpeg/fxo5sUc.jpg/seed/a3', link: 'kitablar/Muasir heyatda kisi olmaq.html' },
+  { t: 'MÜASİR HƏYATDA KİŞİ OLMAQ', p: 0, img: 'https://https://i.imgur.com/kcfFDWH.jpeg', link: 'kitablar/Muasir heyatda kisi olmaq.html' },
   { t: 'ARSIZ-MƏZƏLİ ÜSULU', p: 0, img: 'https://i.imgur.com/ERKHrOJ.jpg', link: 'kitablar/Arsiz-mezeli usulu.html' },
   { t: 'MÜASİR KİŞİNİN SEKS BƏLƏDÇİSİ', p: 0, img: 'https://i.imgur.com/PlhrJHZ.jpg', link: 'kitablar/Muasir kisinin seks beledcisi.html' },
   { t: 'YÜKSƏK SƏVİYYƏLİ TAKTİKALAR', p: 0, img: 'https://i.imgur.com/w3wD8Bc.jpg', link: 'kitablar/Yuksek seviyyeli taktikalar.html' },
