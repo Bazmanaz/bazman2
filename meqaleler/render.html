@@ -1,0 +1,198 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reklam</title>
+
+<style>
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    img {
+        display: block;
+        width: 150%; /* Şəkillərin ölçüsünü eyni etmək üçün */
+        height: auto; /* Şəkillərin ölçüsünü eyni etmək üçün */
+        object-fit: contain; /* Şəkillərin konteynerə uyğunlaşdırılması üçün */
+    }
+
+    .wrapper {
+        width: 100%;
+        max-width: 310px;
+        height: 514px;
+        position: relative;
+        overflow: hidden;
+		 margin: auto; /* Üfüqi mərkəzləşdirmə */
+    display: block; /* Və ya flex, əgər içindəki elementləri mərkəzləşdirmək lazımdırsa */
+    }
+
+    .bg-1 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        background: linear-gradient(203deg, #F5F4FE -66.36%, #553CFF 132.04%), #F4F7FE;
+        z-index: -1;
+    }
+
+    .bg-2 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        background: linear-gradient(203deg, #F8F4FE -66.36%, #863CFF 132.04%), #F4F7FE;
+        animation: bg-2 5.5s linear 0s infinite forwards;
+        z-index: -1;
+    }
+
+    @keyframes bg-2 {
+        0% { opacity: 0; animation-timing-function: linear; }
+        60% { opacity: 0; animation-timing-function: linear; }
+        67.2% { opacity: 1; animation-timing-function: linear; }
+        94.5% { opacity: 1; animation-timing-function: linear; }
+        100% { opacity: 0; animation-timing-function: linear; }
+    }
+
+    .container {
+        width: 100%;
+        height: 110%;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 18px 8px 8px;
+        justify-content: center; /* Kontentı ortada göstərmək üçün */
+        align-items: center; /* Kontentı ortada göstərmək üçün */
+    }
+
+    .hero {
+        height: 1000px; /* Şəkillər üçün ayrılan sahəni artırdım */
+        position: relative;
+        margin-bottom: 38px;
+        width: 100%; /* Kontainerə uyğunlaşdırılması üçün */
+        display: flex; /* Şəkilləri yan-yana düzmək üçün */
+        justify-content: center; /* Şəkilləri ortada toplamaq üçün */
+        align-items: center; /* Şəkilləri dikey ortalamaq üçün */
+        gap: 10px; /* Şəkillər arasındakı boşluq */
+    }
+
+    [class^="img-"] {
+        position: absolute;
+        opacity: 0; /* Başlanğıcda bütün şəkillər gizli */
+        animation: img-animation 20s linear infinite forwards; /* Ümumi animasiya müddəti 10 şəkil * 2 saniye */
+        max-width: 100%; /* Şəkillərin konteynerə uyğunlaşması */
+        max-height: 100%; /* Şəkillərin konteynerə uyğunlaşması */
+        object-fit: contain;
+    }
+
+    /* Hər bir şəkil üçün fərqli gecikmə */
+    .img-1 { animation-delay: 0s; }
+    .img-2 { animation-delay: 2s; }
+    .img-3 { animation-delay: 4s; }
+    .img-4 { animation-delay: 6s; }
+    .img-5 { animation-delay: 8s; }
+    .img-6 { animation-delay: 10s; }
+    .img-7 { animation-delay: 12s; }
+    .img-8 { animation-delay: 14s; }
+    .img-9 { animation-delay: 16s; }
+    .img-10 { animation-delay: 18s; }
+
+    @keyframes img-animation {
+        0% { opacity: 0; transform: scale(0.8); }
+        5% { opacity: 1; transform: scale(1); } /* Şəkil görünür olur */
+        10% { opacity: 1; transform: scale(1); } /* Şəkil görünür qalır */
+        15% { opacity: 0; transform: scale(1.2); } /* Şəkil yox olur */
+        100% { opacity: 0; transform: scale(0.8); } /* Növbəti şəkil üçün hazırlıq */
+    }
+
+
+    .content {
+        background-color: transparent; /* Ağ rəngi yox etmək üçün */
+        padding: 2px;
+        transform: translateX(110%);
+        animation: content-bg 5.5s linear forwards 0s;
+        text-align: center; /* Mətnləri ortada göstərmək üçün */
+    }
+
+    @keyframes content-bg {
+        0% { transform: translateX(110%); animation-timing-function: linear; }
+        7.3% { transform: translateX(110%); animation-timing-function: ease-in-out; }
+        20% { transform: translateX(0%); animation-timing-function: linear; }
+        29% { transform: translateX(0%); animation-timing-function: linear; }
+        54.5% { transform: translateX(0%); animation-timing-function: linear; }
+        100% { transform: translateX(0%); animation-timing-function: linear; }
+    }
+
+    .title {
+        font-family: "YS Display";
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+        margin-bottom: 85px;
+        transform: translateX(80%);
+        animation: content-title 5.5s linear forwards 0s;
+        color: #ffffff; /* Mətn rəngini ağ etdim */
+    }
+
+    @keyframes content-title {
+        0% { transform: translateX(120%); animation-timing-function: linear; }
+        14.5% { transform: translateX(120%); animation-timing-function: ease-in-out; }
+        27.2% { transform: translateX(0%); animation-timing-function: linear; }
+        29% { transform: translateX(0%); animation-timing-function: linear; }
+        54.5% { transform: translateX(0%); animation-timing-function: linear; }
+        100% { transform: translateX(0%); animation-timing-function: linear; }
+    }
+
+    
+    @keyframes content-btn {
+        0% { transform: translateX(120%); animation-timing-function: linear; }
+        16.3% { transform: translateX(120%); animation-timing-function: ease-in-out; }
+        29% { transform: translateX(0%); animation-timing-function: linear; }
+        54.5% { transform: translateX(0%); animation-timing-function: linear; }
+        100% { transform: translateX(0%); animation-timing-function: linear; }
+    }
+
+    @keyframes btn-anim {
+        0% { background-color: #715CFF; animation-timing-function: linear; }
+        60% { background-color: #715CFF; animation-timing-function: linear; }
+        67.2% { background-color: #AB76FF; animation-timing-function: linear; }
+        94.5% { background-color: #AB76FF; animation-timing-function: linear; }
+        100% { background-color: #715CFF; animation-timing-function: linear; }
+    }
+</style>
+
+<a href="render.html" target="_blank">
+    <div class="wrapper">
+        <div class="bg-1"></div>
+        <div class="bg-2"></div>
+        <div class="container">
+            <div class="hero">
+                <img class="img-1" src="https://i.imgur.com/SpcmZXN.jpg" alt="Kitab 1">
+                <img class="img-2" src="https://i.imgur.com/IS2DQl8.jpg" alt="Kitab 2">
+                <img class="img-3" src="https://i.imgur.com/fxo5sUc.jpg" alt="Kitab 3">
+                <img class="img-4" src="https://i.imgur.com/yZ9zPeo.jpg" alt="Kitab 4">
+                <img class="img-5" src="https://i.imgur.com/3aodR8x.jpg/seed/a3" alt="Kitab 5">
+                <img class="img-6" src="https://i.imgur.com/kwMqYGO.jpg" alt="Kitab 6">
+                <img class="img-7" src="https://i.imgur.com/kcfFDWH.jpeg" alt="Kitab 7">
+                <img class="img-8" src="https://i.imgur.com/ERKHrOJ.jpg" alt="Kitab 8">
+                <img class="img-9" src="https://i.imgur.com/PlhrJHZ.jpg" alt="Kitab 9">
+                <img class="img-10" src="https://i.imgur.com/w3wD8Bc.jpg" alt="Kitab 10">
+            </div>
+
+            <div class="content">
+                <div class="title">Kitabları əldə et!<br>
+                    Özünü inkişaf etdir.</div>
+               
+            </div>
+        </div>
+    </div>
+</a>
+</script>

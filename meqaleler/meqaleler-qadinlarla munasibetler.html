@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qadınlarla münasibətlər — BAZMAN.AZ</title>
+<style>
+:root{
+  --bg:#fff;
+  --fg:#111;
+  --muted:#666;
+  --card:#f6f6f7;
+  --accent:#0a84ff;
+  --border:#e6e6ea;
+}
+:root.dark{
+  --bg:#0b0c10;
+  --fg:#e6e6e6;
+  --muted:#9aa0a6;
+  --card:#121319;
+  --accent:#66aaff;
+  --border:#1f222a;
+}
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:Inter,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--fg);
+}
+
+a{color:var(--accent); text-decoration:none;}
+
+.site-header{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+  justify-content:space-between;
+  padding:.75rem 1rem;
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  background:var(--bg);
+  z-index: 1000;
+}
+
+.nav{display:flex;gap:.8rem;flex-wrap:wrap;}
+
+#themeToggle{
+  background:transparent;
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:.4rem .6rem;
+  color:var(--fg);
+}
+
+.grid{padding:2rem 1rem;}
+
+.video-grid{
+  padding:1rem 0;
+}
+
+.video-card{
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  background:var(--card);
+}
+
+.video-card img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+  background-color: #000;
+}
+
+.video-card .pad{padding:.7rem;}
+
+.site-footer{
+  padding:2rem 1rem;
+  border-top:1px solid var(--border);
+  text-align:center;
+  color:var(--muted);
+}
+
+/* Siyahı stili */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+li:last-child {
+  border-bottom: none;
+}
+li a {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+/* Şəkil stili */
+.list-image {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  margin-right: 15px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Axtarış çubuğu stili */
+.search-container {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--bg);
+  position: sticky;
+  top: 60px; /* Header-in altında yerləşdirmək üçün */
+  z-index: 999;
+}
+#searchInput {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background-color: var(--card);
+  color: var(--fg);
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+#searchInput:focus {
+  border-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav {
+    margin-top: 10px;
+  }
+}
+  
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 120px;
+            right: 20px;
+            z-index: 1000; /* Ensure it stays on top */
+        }
+        .whatsapp-icon img {
+            width: 50px; /* Adjust size as needed */
+            height: 50px; /* Adjust size as needed */
+            border-radius: 50%; /* Makes it circular */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds a subtle shadow */
+        }
+    
+</style>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reklam</title>
+</head>
+<body>
+
+
+<header class="site-header"><div class="brand"><img src="https://via.placeholder.com/120x40?text=BAZMAN.AZ" alt=""></div>
+<nav class="nav"><a href="../index.html">Əsas</a><a href="meqaleler.html">Məqalələr</a></nav><button id="themeToggle">🌙</button></header>
+
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Məqalələrdə axtar...">
+</div>
+
+<main class="grid">
+  <h2>Qadınlarla münasibətlər</h2>
+  <div class="video-grid">
+    <ul>
+		<li><img src="https://i.imgur.com/DRfRp7S.jpeg/60/60?random=49" alt="Məqalə şəkli" class="list-image"><a href="Qadin-ikinci-goruse-gelmir.html">QADIN İKİNCİ GÖRÜŞƏ NİYƏ GƏLMİR?</a></li>
+	  <li><img src="https://i.imgur.com/fLD0SKL.jpeg/60/60?random=49" alt="Məqalə şəkli" class="list-image"><a href="Menfi-kompliment.html">Mənfi Kompliment və ya İçində Tənqid Olan Tərif Nədir?</a></li>
+      <li><img src="https://i.imgur.com/z00ZYM9.jpeg/60/60?random=1" alt="Məqalə şəkli" class="list-image"><a href="Alici pesmanligi.html">Alıcı Peşmanlığı</a></li>
+      <li><img src="https://i.imgur.com/qVA1UiL.jpeg/60/60?random=2" alt="Məqalə şəkli" class="list-image"><a href="Bir qizi sevirsen.html">BİR QIZI SEVİRSƏN,ANCAQ O SƏNİ SEVMİR</a></li>
+      <li><img src="https://i.imgur.com/y5uN57m.jpeg/60/60?random=3" alt="Məqalə şəkli" class="list-image"><a href="Qadin tovlamaq seneti.html">QADIN TOVLAMAQ PSİXOLOJİ MÖHKƏMLİK TƏLƏB EDİR</a></li>
+      <li><img src="https://i.imgur.com/QWUztee.jpeg/60/60?random=4" alt="Məqalə şəkli" class="list-image"><a href="Eybecer Kasanova.html">EYBƏCƏR CASANOVANI QADINLAR NİYƏ ÇOX SEVİRDİLƏR?</a></li>
+      <li><img src="https://i.imgur.com/UM9DsbB.jpeg/60/60?random=5" alt="Məqalə şəkli" class="list-image"><a href="Qadinler niye seninle munasibet istemir.html">Qadınlar Niyə Səninlə Münasibət İstəmir?13 ƏSAS SƏBƏB</a></li>
+      <li><img src="https://i.imgur.com/aHyUOsG.jpeg/60/60?random=6" alt="Məqalə şəkli" class="list-image"><a href="Cirkin kisi pesekar bazmene cevrile bilermi.html">ÇİRKİN KİŞİ PEŞƏKAR BAZMENƏ ÇEVRİLƏ BİLƏRMİ?</a></li>
+      <li><img src="https://i.imgur.com/5xpSLZE.jpeg/60/60?random=7" alt="Məqalə şəkli" class="list-image"><a href="Catismazliq hissi.html">Çatışmazlıq Hissinin Öhdəsindən Necə gəlməlisən?</a></li>
+      <li><img src="https://i.imgur.com/Icsn5Px.jpeg/60/60?random=8" alt="Məqalə şəkli" class="list-image"><a href="Eclaf xarakteri.html">ƏCLAF XARAKTERİ NƏDİR? VƏ ƏHƏMİYYƏTİ</a></li>
+      <li><img src="https://i.imgur.com/5tRTRbk.jpeg/60/60?random=9" alt="Məqalə şəkli" class="list-image"><a href="Depressiye ve stresden qorunmagin yollari.html">DEPRESSİYA VƏ STRESSDƏN QORUNMAĞIN YOLLARI</a></li>
+      <li><img src="https://i.imgur.com/vko5STA.jpeg/60/60?random=10" alt="Məqalə şəkli" class="list-image"><a href="Milf qadinlari tovlamagin yollari.html">YETKİN QADINLARI TOVLAMAĞIN YOLLARI</a></li>
+      <li><img src="https://i.imgur.com/t6hg08s.jpeg/60/60?random=11" alt="Məqalə şəkli" class="list-image"><a href="Mesajlara qizlar niye cavab vermir.html">MESAJLARA QIZLAR NİYƏ CAVAB VERMİR? YAXUD GEC CAVAB VERİR VƏ SƏBƏBLƏRİ.</a></li>
+      <li><img src="https://i.imgur.com/Yvtr9xH.jpeg/60/60?random=12" alt="Məqalə şəkli" class="list-image"><a href="Qadinlar niye aciq geyinir.html">QADINLAR NİYƏ AÇIQ GEYİNİR? SƏBƏBLƏRİ.</a></li>
+      <li><img src="https://i.imgur.com/qoVcRAN.jpeg/60/60?random=13" alt="Məqalə şəkli" class="list-image"><a href="Munasibetde aqressiv xarakterli kisi olmaq.html">MÜNASİBƏTDƏ AQRESSİV XARAKTERLİ KİŞİ OLMAQ</a></li>
+      <li><img src="https://i.imgur.com/CmQutso.jpeg/60/60?random=14" alt="Məqalə şəkli" class="list-image"><a href="Tecavuzkar hesab edilmek qorxusu nedir.html">TƏCAVÜZKAR HESAB EDİLMƏK QORXUSU NƏDİR?</a></li>
+      <li><img src="https://i.imgur.com/Z4Ey0Q5.jpeg/60/60?random=15" alt="Məqalə şəkli" class="list-image"><a href="Celbedici kisinin geyim beledcisi.html">CƏLBEDİCİ KİŞİNİN GEYİM BƏLƏDÇİSİ</a></li>
+      <li><img src="https://i.imgur.com/QkmJyLg.jpeg/60/60?random=16" alt="Məqalə şəkli" class="list-image"><a href="Seks ucun cox pul xerclemek ve meyus olmaq.html">Seks üçün çox pul xərcləmək və məyus olmaq</a></li>
+      <li><img src="https://i.imgur.com/UKaWKpb.jpeg/60/60?random=17" alt="Məqalə şəkli" class="list-image"><a href="Alfa kisi.html">ALFA KİŞİ</a></li>
+      <li><img src="https://i.imgur.com/PztQ7Mo.jpeg/60/60?random=18" alt="Məqalə şəkli" class="list-image"><a href="Sagmal inek beta kisi.html">SAĞMAL İNƏK BETA KİŞİ</a></li>
+      <li><img src="https://i.imgur.com/yDrgRtT.jpeg/60/60?random=19" alt="Məqalə şəkli" class="list-image"><a href="Beta kisilerin 5 xususiyyeti.html">BETA KİŞİLƏRİN 5 XARAKTER XÜSUSİYYƏTLƏRİ</a></li>
+      <li><img src="https://i.imgur.com/XoRGIoj.jpeg/60/60?random=20" alt="Məqalə şəkli" class="list-image"><a href="Gunduz oyunu haqqinda 5 madde.html">GÜNDÜZ OYUNU HAQQINDA 5 MADDƏ</a></li>
+      <li><img src="https://i.imgur.com/LnTDGKg.jpeg/60/60?random=21" alt="Məqalə şəkli" class="list-image"><a href="Qiz mesajima cavab vermir, ne etmeliyem.html">QIZ MESAJIMA CAVAB VERMİR. NƏ ETMƏLİYƏM?</a></li>
+      <li><img src="https://i.imgur.com/RwraGqY.jpeg/60/60?random=22" alt="Məqalə şəkli" class="list-image"><a href="Beyendiyin qizi tovlamagin 3 yolu.html">BƏYƏNDİYİN QIZI TOVLAMAĞIN 3 YOLU</a></li>
+      <li><img src="https://i.imgur.com/kCgiMVR.jpeg/60/60?random=23" alt="Məqalə şəkli" class="list-image"><a href="Tovlama strategiyalari.html">TOVLAMA STRATEGİYALARI. QIZI EVƏ NECƏ GƏTİRƏ BİLƏRƏM?</a></li>
+      <li><img src="https://i.imgur.com/QUWyNMh.jpeg/60/60?random=24" alt="Məqalə şəkli" class="list-image"><a href="Sekse layiq kisi olmaq.html">SEKSƏ LAYİQ KİŞİ OLMAQ</a></li>
+      <li><img src="https://i.imgur.com/fcpzHkc.jpeg/60/60?random=25" alt="Məqalə şəkli" class="list-image"><a href="Fahise qalxani.html">FAHİŞƏ QALXANI NƏDİR ?</a></li>
+      <li><img src="https://i.imgur.com/un09nfX.jpeg/60/60?random=26" alt="Məqalə şəkli" class="list-image"><a href="Mesajda seksden danismaq olmaz.html">MESAJDA SEKSDƏN DANIŞMAQ SƏHVDİR</a></li>
+      <li><img src="https://i.imgur.com/dX9Cyew.jpeg/60/60?random=27" alt="Məqalə şəkli" class="list-image"><a href="Evlilik qanunlari.html">EVLİLİK QANUNLARI</a></li>
+      <li><img src="https://i.imgur.com/4wW4LkM.jpeg/60/60?random=28" alt="Məqalə şəkli" class="list-image"><a href="Munasibetlerin bitmesinin 5 sebebi.html">MÜNASİBƏTLƏRİN BİTMƏSİNİN 5 SƏBƏBİl</a></li>
+      <li><img src="https://i.imgur.com/gj7xzNT.jpeg/60/60?random=29" alt="Məqalə şəkli" class="list-image"><a href="Gozelqadinlari heyran etmeyin 7 yolu.html">GÖZƏL QADINLARI HEYRAN ETMƏYİN 7 YOLU</a></li>
+      <li><img src="https://i.imgur.com/xJ9Seat.jpeg/60/60?random=30" alt="Məqalə şəkli" class="list-image"><a href="Qarmaq noqtesine nece catacaqsan.html">QARMAQ NÖQTƏSİNƏ NECƏ ÇATACAQSAN?</a></li>
+      <li><img src="https://i.imgur.com/25vu5I8.jpeg/60/60?random=31" alt="Məqalə şəkli" class="list-image"><a href="Qadinlarin kisilik testi.html">QADINLARIN KİŞİLİK TESTİ</a></li>
+      <li><img src="https://i.imgur.com/zT7rSw5.jpeg/60/60?random=32" alt="Məqalə şəkli" class="list-image"><a href="Qadinlar tebii olaraq muqavimet gosterir.html">QADINLAR TƏBİİ OLARAQ MÜQAVİMƏT GÖSTƏRİR</a></li>
+      <li><img src="https://i.imgur.com/XYpayhv.jpeg/60/60?random=33" alt="Məqalə şəkli" class="list-image"><a href="Onietis sindromu.html">ONEİTİES SİNDROMU NƏDİR ?</a></li>
+      <li><img src="https://i.imgur.com/cBpFN6Z.jpeg/60/60?random=34" alt="Məqalə şəkli" class="list-image"><a href="Qirmizi heb.html">QIRMIZI HƏB NƏDİR ?</a></li>
+      <li><img src="https://i.imgur.com/Q0gR6dF.jpeg/60/60?random=35" alt="Məqalə şəkli" class="list-image"><a href="Qadinlara yaxinlasma qorxusu.html">QADINLARA YAXINLAŞMA QORXUSU</a></li>
+      <li><img src="https://i.imgur.com/GwsQaa0.jpeg/60/60?random=36" alt="Məqalə şəkli" class="list-image"><a href="Men ne edirem.html">"MƏN NƏ EDİRƏM?" HİSSİ</a></li>
+      <li><img src="https://i.imgur.com/jaHcuvz.jpeg/60/60?random=37" alt="Məqalə şəkli" class="list-image"><a href="Kisinin seksual celbediciliyi.html">KİŞİNİN SEKSUAL CƏLBEDİCİLİYİNİ ÖLDÜRƏN ŞEYLƏR</a></li>
+      <li><img src="https://i.imgur.com/k4d0ZAx.jpeg/60/60?random=38" alt="Məqalə şəkli" class="list-image"><a href="Gunduz oyunu hereket rejimim.html">GÜNDÜZ OYUNU HƏRƏKƏT REJİMİM</a></li>
+      <li><img src="https://i.imgur.com/qqu2KWw.jpeg/60/60?random=39" alt="Məqalə şəkli" class="list-image"><a href="Belici-belkeci.html">BƏLİÇİ-BƏLKƏÇİ- YOXÇU QADINLAR</a></li>
+	  <li><img src="https://i.imgur.com/Uuqm2wd.jpeg/60/60?random=40" alt="Məqalə şəkli" class="list-image"><a href="Porno və masturbasiya.html">PORNO VƏ MASTURBASİYA</a></li>
+	   <li><img src="https://i.imgur.com/fHJcJre.jpeg/60/60?random=40" alt="Məqalə şəkli" class="list-image"><a href="Qadin-bisirmeyin-yollari-tinderde.html">QADIN BİŞİRMƏYİN YOLLARI TİNDERDƏ</a></li>
+      <li><img src="https://i.imgur.com/Y4F7P6w.jpeg/60/60?random=41" alt="Məqalə şəkli" class="list-image"><a href="Qadinlarla tanis ola bileceyin yerler.html">QADINLARLA TANIŞ OLA BİLƏCƏYİN YERLƏR</a></li>
+      <li><img src="https://i.imgur.com/nzNonJG.jpeg/60/60?random=42" alt="Məqalə şəkli" class="list-image"><a href="Alfa kimdir beta kim.html">ALFA KİŞİ KİMDİR, BETA KİŞİ KİMDİR</a></li>
+      <li><img src="https://i.imgur.com/xEVrFjd.jpeg/60/60?random=43" alt="Məqalə şəkli" class="list-image"><a href="Reddedilme.html">RƏDDEDİLMƏ VƏ SEVGİ AĞRISINDAN ZƏRƏRLİ VƏRDİŞLƏRƏ</a></li>
+      <li><img src="https://i.imgur.com/ryl3HqB.jpeg/60/60?random=44" alt="Məqalə şəkli" class="list-image"><a href="Qadinlarda saf arzu oyatmaq.html">QADINLARDA SAF ARZU OYATMAQ</a></li>
+      <li><img src="https://i.imgur.com/kX15Prz.jpeg/60/60?random=45" alt="Məqalə şəkli" class="list-image"><a href="Gizli cemiyyet.html">GİZLİ CƏMİYYƏT</a></li>
+      <li><img src="https://i.imgur.com/oJuEfut.jpeg/60/60?random=46" alt="Məqalə şəkli" class="list-image"><a href="Kucede qadinla tanis olma.html">KÜÇƏDƏ QADINLA TANIŞ OLMA</a></li>
+      <li><img src="https://i.imgur.com/aGKyrFI.jpeg/60/60?random=47" alt="Məqalə şəkli" class="list-image"><a href="Qelbi qırılan kisiler.html">QƏLBİ QIRILAN KİŞİLƏRİN SƏNƏTİ</a></li>
+      <li><img src="https://i.imgur.com/IAhnNjt.jpeg/60/60?random=48" alt="Məqalə şəkli" class="list-image"><a href="Qadin tovlamaq.html">QADIN TOVLAMAQ</a></li>
+      <li><img src="https://i.imgur.com/ZOrua3V.jpeg/60/60?random=49" alt="Məqalə şəkli" class="list-image"><a href="Qadinla sohbete baslamaq.html">QADINLA SÖHBƏTƏ BAŞLAMAQ</a></li>
+	
+	  
+	  
+    </ul>
+  </div>
+</main>
+<script>
+    window.destroyBanner=function(){$sf.ext.nuke()};
+    ;(function (w) {var ns = (function(e){return e.Ya||(e.Ya={}),e.Ya.adfoxCode||(e.Ya.adfoxCode={}),e.Ya.adfoxCode})(w);})(window);
+</script>
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            html.classList.add('dark');
+        }
+        themeToggleBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const currentTheme = html.classList.contains('dark') ? 'dark' : 'light';
+            localStorage.setItem('theme', currentTheme);
+        });
+
+        // Yeni əlavə edilmiş JavaScript kodu
+        const searchInput = document.getElementById('searchInput');
+        const articlesList = document.querySelectorAll('.video-grid li');
+
+        searchInput.addEventListener('keyup', (e) => {
+            const searchText = e.target.value.toLowerCase();
+            articlesList.forEach(article => {
+                const title = article.querySelector('a').innerText.toLowerCase();
+                if (title.includes(searchText)) {
+                    article.style.display = 'flex';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+
+
+<a href="https://wa.me/+994778037177" target="_blank" class="whatsapp-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp">
+    </a>
+</body>
+</html>

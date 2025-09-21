@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root {
+  --bg: #fff;
+  --fg: #111;
+  --muted: #666;
+  --card: #f6f6f7;
+  --accent: #0a84ff;
+  --border: #e6e6ea;
+}
+:root.dark {
+  --bg: #0b0c10;
+  --fg: #e6e6e6;
+  --muted: #9aa0a6;
+  --card: #121319;
+  --accent: #66aaff;
+  --border: #1f222a;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.site-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+#themeToggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.4rem 0.6rem;
+  color: var(--fg);
+}
+
+.grid {
+  padding: 2rem 1rem;
+}
+
+/* Yeni grid stili */
+.articles-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 sütun */
+  gap: 1.5rem; /* Sütunlar və sıralar arasındakı boşluq */
+}
+
+.article-card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--card);
+  text-align: center; /* Mətni ortalamaq üçün */
+  display: flex;
+  flex-direction: column; /* Şəkil yuxarıda, mətn aşağıda */
+  justify-content: space-between; /* Boşluqları bərabər bölmək üçün */
+}
+
+.article-card img {
+  width: 100%;
+  height: auto; /* Şəkil hündürlüyünü təyin et */
+  object-fit: cover; /* Şəklin kəsilmədən yerləşməsini təmin et */
+  display: block;
+  border-radius: 6px;
+  background-color: #000;
+}
+
+.article-card .pad {
+  padding: 0.7rem;
+  flex-grow: 1; /* Mətn sahəsinin genişlənməsini təmin et */
+  display: flex;
+  align-items: center; /* Mətni şaquli mərkəzləşdir */
+  justify-content: center; /* Mətni üfüqi mərkəzləşdir */
+}
+
+.site-footer {
+  padding: 2rem 1rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Siyahı stili (artıq istifadə olunmur, amma saxlanılıb) */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+li:last-child {
+  border-bottom: none;
+}
+li a {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+/* Şəkil stili (artıq istifadə olunmur) */
+.list-image {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  margin-right: 15px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Axtarış çubuğu stili */
+.search-container {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--bg);
+  position: sticky;
+  top: 60px; /* Header-in altında yerləşdirmək üçün */
+  z-index: 999;
+}
+#searchInput {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background-color: var(--card);
+  color: var(--fg);
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+#searchInput:focus {
+  border-color: var(--accent);
+}
+
+@media (max-width: 1200px) {
+  .articles-container {
+    grid-template-columns: repeat(4, 1fr); /* 1200px-dən kiçik ekranlarda 4 sütun */
+  }
+}
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav {
+    margin-top: 10px;
+  }
+  .articles-container {
+    grid-template-columns: repeat(2, 1fr); /* 768px-dən kiçik ekranlarda 2 sütun */
+  }
+}
+@media (max-width: 480px) {
+  .articles-container {
+    grid-template-columns: 1fr; /* 480px-dən kiçik ekranlarda 1 sütun */
+  }
+}
+
+/* WhatsApp ikonu stili */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 80px; /* Header və digər elementləri nəzərə alaraq ayarlanıb */
+  right: 20px;
+  z-index: 1000; /* Üzərində qalmasını təmin etmək üçün */
+}
+.whatsapp-icon img {
+  width: 50px; /* İstədiyiniz ölçüyə uyğunlaşdırın */
+  height: 50px; /* İstədiyiniz ölçüyə uyğunlaşdırın */
+  border-radius: 50%; /* Dairəvi etmək üçün */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Zərif kölgə əlavə edir */
+}
+<div style="text-align: center;">
+</style>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Məqalələr</title>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand"></div>
+  <nav class="nav">
+    <a href="../index.html">Əsas</a>
+  </nav>
+  <button id="themeToggle">🌙</button>
+</header>
+
+<main class="grid">
+  <h2>Məqalələr</h2>
+   <div class="articles-container">
+    <div class="article-card">
+      <img src="https://i.imgur.com/OzYUhVn.jpeg" alt="Qadınlarla münasibətlər">
+      <div class="pad">
+        <a href="meqaleler-qadinlarla munasibetler.html"><strong>QADINLARLA MÜNASİBƏTLƏR</strong></a>
+      </div>
+    </div>
+    <div class="article-card">
+      <img src="https://i.imgur.com/xLN3f3N.jpeg" alt="İDMAN">
+      <div class="pad">
+        <a href="meqaleler-idman.html"><strong>İDMAN</strong></a>
+      </div>
+    </div>
+    <div class="article-card">
+      <img src="https://i.imgur.com/1V06HXi.jpeg" alt="DÜZGÜN QİDALANMA">
+      <div class="pad">
+        <a href="meqaleler-duzgun qidalanma.html"><strong>DÜZGÜN QİDALANMA</strong></a>
+      </div>
+    </div>
+    <div class="article-card">
+      <img src="https://i.imgur.com/7JnxoSY.gif" alt="DƏB VƏ STİL">
+      <div class="pad">
+        <a href="meqaleler-deb və stil.html"><strong>DƏB VƏ STİL</strong></a>
+      </div>
+    </div>
+    <div class="article-card">
+      <img src="https://i.imgur.com/jpx7ARQ.jpeg" alt="PUL QAZANMAQ">
+      <div class="pad">
+        <a href="meqaleler-pul qazanmaq.html"><strong>PUL QAZANMAQ</strong></a>
+      </div>
+    </div>
+    <div class="article-card">
+      <img src="https://i.imgur.com/EdpwkwG.jpeg" alt="İSTİRAHƏT">
+      <div class="pad">
+        <a href=".html"><strong>İSTİRAHƏT</strong></a>
+      </div>
+    </div>
+	   <div class="article-card">
+      <img src="https://i.imgur.com/a7VczZV.jpeg" alt="ƏN YAXŞI MƏKANLAR">
+      <div class="pad">
+        <a href=".html"><strong>ƏN YAXŞI MƏKANLAR</strong></a>
+      </div>
+    </div>
+</main>
+<a href="https://wa.me/+994778037177" target="_blank" class="whatsapp-icon">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp">
+</a>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MƏQALƏLƏR</title>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            html.classList.add('dark');
+        }
+        themeToggleBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const currentTheme = html.classList.contains('dark') ? 'dark' : 'light';
+            localStorage.setItem('theme', currentTheme);
+        });
+
+        // Yeni əlavə edilmiş JavaScript kodu
+        const searchInput = document.getElementById('searchInput');
+        const articlesList = document.querySelectorAll('.video-grid li');
+
+        searchInput.addEventListener('keyup', (e) => {
+            const searchText = e.target.value.toLowerCase();
+            articlesList.forEach(article => {
+                const title = article.querySelector('a').innerText.toLowerCase();
+                if (title.includes(searchText)) {
+                    article.style.display = 'flex';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
